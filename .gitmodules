@@ -1,0 +1,3 @@
+[submodule "coktail-train/spec"]
+	path = coktail-train/spec
+	url = https://github.com/lewagon/fullstack-challenges-04-Rails-mister-cocktail-specs.git
