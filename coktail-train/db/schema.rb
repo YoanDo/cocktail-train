@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20170917141422) do
 
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -42,4 +41,3 @@ ActiveRecord::Schema.define(version: 20170917141422) do
   add_foreign_key "doses", "cocktails"
   add_foreign_key "doses", "ingredients"
 end
-

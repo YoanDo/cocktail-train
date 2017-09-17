@@ -1,1 +1,21 @@
-<h2>yo</h2>
+<div class="show">
+  <div class="title">
+    <h1><%= @cocktail.name %></h1>
+  </div>
+  <div class="ingredients">
+    <ul>
+      <% @cocktail.ingredients.each do |i| %>
+      <li><%= i.name %> </li>
+      <% end %>
+    </ul>
+    <%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail), class: "see-receipe"%>
+  </div>
+  <div class="photo">
+    <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+  </div>
+  <ul class="in-line">
+    <li><%= link_to 'delete', cocktail_path(@cocktail), method: :delete, :confirm => 'Are you sure?' %></li>
+    <li><%= link_to "back", cocktails_path %></li>
+    <li><%= link_to "edit", edit_cocktail_path(@cocktail) %></li>
+  </ul>
+</div>
