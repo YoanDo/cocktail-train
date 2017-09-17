@@ -64,3 +64,7 @@ gem 'jquery-rails' # Add this line if you use Rails 5.1
 
 # Security
 gem 'figaro'
+
+# image
+gem 'cloudinary'
+gem 'carrierwave', '~> 0.11.2'
