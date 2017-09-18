@@ -1,7 +1,50 @@
-<h1>Test</h1>
+<div id="bg">
+  <div class="title">
+    <img src="https://image.flaticon.com/icons/svg/457/457994.svg" class="logo" alt="">
+    <h1>TRY OUR <br><hr class="barre">SIGNATURE DRINKS</h1>
+  </div>
+</div>
+<div class="container-menu">
+  <!-- <h2 id="signature">Signature drinks: </h2> -->
+  <div class="cardboard">
+    <% @cocktails.each do |c|%>
+    <!-- card section -->
+    <div class="card">
+      <div class="card-image waves-effect waves-block waves-light">
+        <% if c.photo.url.present? %>
+        <%= cl_image_tag c.photo, class: "activator" %>
+        <% else %>
+        <%= image_tag "https://static.pexels.com/photos/298719/pexels-photo-298719.jpeg", class: "activator" %>
+        <% end %>
+      </div>
+      <div class="card-content">
+        <span class="card-title activator grey-text text-darken-4"><%= c.name %>
+          <i class="material-icons right activator"><i class="fa fa-eye" aria-hidden="true"></i>
+        </i></span>
+        <p><a href="#">
+          <%= link_to 'Edit the recipe', cocktail_path(c), class: "see-receipe" %>
+        </a></p>
+      </div>
+      <!-- hidden -->
+      <div class="card-reveal">
+        <span class="card-title grey-text text-darken-4"><i class="material-icons right">x</i><h4> <%= c.name %></h4>
+        <hr> Ingredients:</span>
+        <p>
+          <ul>
+            <% c.ingredients.each do |i| %>
+            <li><%= i.name %></li>
+            <% end %>
+          </ul></p>
+          <i class="material-icons">close</i>
+        </div>
+      </div>
 
-<% @cocktails.each do | c | %>
-  <%= link_to cocktail_path(c) do%>
-    <p><%= c.name %></p>
     <% end %>
-<% end %>
+    <div class="card">
+    <%= link_to '+ Add a new cocktail', new_cocktail_path, class: "add-Cocktail" %>
+  </div>
+  </div>
+  <div class="create">
+    <%= link_to '+ Add a new cocktail', new_cocktail_path, class: "add-Cocktail" %>
+  </div>
+</div>

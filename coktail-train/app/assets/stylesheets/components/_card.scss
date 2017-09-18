@@ -1,0 +1,55 @@
+.cardboard {
+  display:flex;
+  justify-content: space-around;
+  flex-direction: row;
+  margin-bottom: 1%;
+  flex-flow: row wrap;
+
+}
+
+.card {
+  color: white;
+  margin-bottom: 2%;
+  padding: 2%;
+
+  @media (max-width: 4000px) {
+      flex-basis: 30%;
+  }
+
+    @media (max-width: 640px) {
+      flex-basis: 50%;
+      background-color: blue;
+  }
+
+    @media (max-width: 375px) {
+      flex-basis: 100%;
+      background-color: yellow;
+  }
+
+}
+
+.card-description h4 {
+  color:white;
+}
+
+.card-title h4 {
+  font-family: 'Abril Fatface', cursive;
+  letter-spacing: 3px;
+  color: #FF7257;
+}
+
+.card .card-content .card-title {
+  margin-bottom: 30px;
+}
+
+.card.content{
+  height: 500px;
+}
+
+.card-reveal ul {
+  color : grey;
+}
+
+.card-image {
+  max-height: 262px;
+}

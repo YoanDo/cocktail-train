@@ -1,3 +1,4 @@
+// Specific CSS for your home-page
 // Graphical variables
 @import "config/fonts";
 @import "config/colors";
@@ -13,3 +14,19 @@
 @import "layouts/index";
 @import "components/index";
 @import "pages/index";
+
+
+body {
+  background-color: rgba(62, 193, 115, 0.09);
+
+  // background: linear-gradient(135deg, #FFA17F, #00223E);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
